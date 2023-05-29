@@ -11,11 +11,13 @@ public class TareaPrograIIPOO {
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
        Calculadora calculadora = new Calculadora("JP");
-       CalculadoraEspecial calculadoraEspecial = new CalculadoraEspecial("Casio","Azul",435,"123abc","Jack");
+       CalculadoraEspecial calculadoraEspecial = new CalculadoraEspecial("Casio","Azul",435,"123abc","Jack"); //No logro definirlo correctamnte
        boolean salir = false;
        int opcion, opcioncalculadora, num1,  num2; 
          
+       //mostrar los datos
        calculadoraEspecial.mostrarDatos();
+       
        do{
            
            System.out.println("");
