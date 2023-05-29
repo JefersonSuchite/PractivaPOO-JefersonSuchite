@@ -11,23 +11,25 @@ public class TareaPrograIIPOO {
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
        Calculadora calculadora = new Calculadora("JP");
-       CalculadoraEspecial calculadoraEspecial = new CalculadoraEspecial();
+       CalculadoraEspecial calculadoraEspecial = new CalculadoraEspecial("Casio","Azul",435,"123abc","Jack");
        boolean salir = false;
-       int opcion; 
-       int opcioncalculadora;
-       int num1, num2;
-       
+       int opcion, opcioncalculadora, num1,  num2; 
+         
+       calculadoraEspecial.mostrarDatos();
        do{
            
            System.out.println("");
            System.out.println("");
            System.out.println("Bienvenidos a si sistema de calculadora preferido.");
+           System.out.println("Mi Nombre es JACK!");
            System.out.println("Por favor, seleccione la calculadora a utilizar");
+           System.out.println("");
            System.out.println("=======================");
            System.out.println("1. Calculadora Simple");
            System.out.println("2. Calculadora Especial");
            System.out.println("3. Salir");
            System.out.println("=======================");
+           
            opcioncalculadora = sn.nextInt();
            
            switch(opcioncalculadora){
@@ -43,6 +45,7 @@ public class TareaPrograIIPOO {
                   System.out.println("7. Salir");
                   System.out.println("Selecciona una opcion");
                   System.out.println("=======================");
+                  
                   opcion = sn.nextInt();
                    
               switch(opcion){
@@ -51,6 +54,7 @@ public class TareaPrograIIPOO {
                       num1 = sn.nextInt();
                       System.out.println("Ingrese el segundo numero: ");
                       num2 = sn.nextInt();
+                      
                       System.out.println("El resultado de la suma es = " + calculadora.sumar(num1, num2));
                       break;
                   case 2:
@@ -164,7 +168,7 @@ public class TareaPrograIIPOO {
                     System.out.println("Solo numeros entre 1 y 3");
             }  
         }
-           
+    
         while(!salir);
        System.out.println("Hasta luego!");
         

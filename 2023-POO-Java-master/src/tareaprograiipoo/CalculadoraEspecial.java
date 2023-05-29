@@ -4,9 +4,21 @@
  */
 //Jeferson Suchite 0909-22-12681
 package tareaprograiipoo;
+
 import java.util.Random;
 
-public class CalculadoraEspecial {
+public class CalculadoraEspecial extends Calculadora {
+    
+    //Herencia    
+    //Constructor
+    public CalculadoraEspecial (String tipoCalculadora, String color, int dimensionPantalla, String numeroDeSerie, String nombrePropietario){
+        super(tipoCalculadora,color,dimensionPantalla,numeroDeSerie,nombrePropietario);
+    }
+    
+    public void mostrarDatos(){
+    System.out.println("Tipo de Calculadora: "+tipoCalculadora+"\nColor: "+color+"\nDimension: "+dimensionPantalla+"x"+dimensionPantalla+"\nNumero de Serie: "+numeroDeSerie+"\nNombre del Propietario: "+nombrePropietario);
+    }
+    
     public int generarNumeroAleatorio(int limiteSuperior) {
         Random random = new Random();
         return random.nextInt(limiteSuperior);
@@ -36,5 +48,9 @@ public class CalculadoraEspecial {
         return Math.cbrt(numero);
     }
 
-   
+    boolean mostrarDatos(String hola) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
 }
