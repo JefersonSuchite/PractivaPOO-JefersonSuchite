@@ -10,7 +10,7 @@ public class TareaPrograIIPOO {
     
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
-       Calculadora calculadora = new Calculadora("JP");
+      // Calculadora calculadoraEspecial = new Calculadora("JP");
        
        //haciendo que el usuario ingrese sus datos para la calculadora apra que sean utilizados en la creacion de la calculadora especial
        CalculadoraEspecial calculadoraEspecial;
@@ -73,38 +73,38 @@ public class TareaPrograIIPOO {
                       System.out.println("Ingrese el segundo numero: ");
                       num2 = sn.nextInt();
                       
-                      System.out.println("El resultado de la suma es = " + calculadora.sumar(num1, num2));
+                      System.out.println("El resultado de la suma es = " + calculadoraEspecial.sumar(num1, num2));
                       break;
                   case 2:
                       System.out.println("Ingrese el primer numero: ");
                       num1 = sn.nextInt();
                       System.out.println("Ingrese el segundo numero: ");
                       num2 = sn.nextInt();
-                      System.out.println("El resultado de la resta es = " + calculadora.restar(num1, num2));
+                      System.out.println("El resultado de la resta es = " + calculadoraEspecial.restar(num1, num2));
                       break;
                   case 3:
                       System.out.println("Ingrese el primer numero: ");
                       num1 = sn.nextInt();
                       System.out.println("Ingrese el segundo numero: ");
                       num2 = sn.nextInt();
-                      System.out.println("El resultado de la multiplicacion es = " + calculadora.multiplicar(num1, num2));
+                      System.out.println("El resultado de la multiplicacion es = " + calculadoraEspecial.multiplicar(num1, num2));
                       break;
                   case 4:
                       System.out.println("Ingrese el primer numero: ");
                       num1 = sn.nextInt();
                       System.out.println("Ingrese el segundo numero: ");
                       num2 = sn.nextInt();
-                      System.out.println("El resultado de la división es = " + calculadora.dividir(num1, num2));
+                      System.out.println("El resultado de la división es = " + calculadoraEspecial.dividir(num1, num2));
                       break;
                   case 5:
                       System.out.println("Ingrese el numero: ");
                       num1 = sn.nextInt();
-                      System.out.println("El resultado de la raíz cuadrada es = " + calculadora.raizCuadrada(num1));
+                      System.out.println("El resultado de la raíz cuadrada es = " + calculadoraEspecial.raizCuadrada(num1));
                       break;
                   case 6:
                       System.out.println("Ingrese el numero: ");
                       num1 = sn.nextInt();
-                      System.out.println("Es primo? = " + calculadora.esPrimo(num1));
+                      System.out.println("Es primo? = " + calculadoraEspecial.esPrimo(num1));
                       break;
                   case 7:
                       salir=true;
