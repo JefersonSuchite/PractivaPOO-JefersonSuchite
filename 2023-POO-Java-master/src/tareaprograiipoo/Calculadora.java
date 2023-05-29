@@ -19,7 +19,7 @@ public class Calculadora {
         this.nombrePropietario=propietario;
     }
     
-
+    //constructor 
     public Calculadora(String tipoCalculadora, String color, int dimensionPantalla, String numeroDeSerie, String nombrePropietario) {
         this.tipoCalculadora = tipoCalculadora;
         this.color = color;
@@ -28,7 +28,7 @@ public class Calculadora {
         this.nombrePropietario = nombrePropietario;
     }
     
-
+    //get
     public String getTipoCalculadora() {
         return tipoCalculadora;
     }

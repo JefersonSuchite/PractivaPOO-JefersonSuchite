@@ -19,6 +19,7 @@ public class CalculadoraEspecial extends Calculadora {
     System.out.println("Tipo de Calculadora: "+tipoCalculadora+"\nColor: "+color+"\nDimension: "+dimensionPantalla+"x"+dimensionPantalla+"\nNumero de Serie: "+numeroDeSerie+"\nNombre del Propietario: "+nombrePropietario);
     }
     
+    //calculadora especial
     public int generarNumeroAleatorio(int limiteSuperior) {
         Random random = new Random();
         return random.nextInt(limiteSuperior);
@@ -47,10 +48,5 @@ public class CalculadoraEspecial extends Calculadora {
     public double calcularRaizCubica(double numero) {
         return Math.cbrt(numero);
     }
-
-    boolean mostrarDatos(String hola) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     
 }

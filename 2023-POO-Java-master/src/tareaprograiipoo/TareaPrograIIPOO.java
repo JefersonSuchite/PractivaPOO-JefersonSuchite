@@ -11,16 +11,32 @@ public class TareaPrograIIPOO {
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
        Calculadora calculadora = new Calculadora("JP");
-       CalculadoraEspecial calculadoraEspecial = new CalculadoraEspecial("Casio","Azul",435,"123abc","Jack"); //No logro definirlo correctamnte
+       
+       //haciendo que el usuario ingrese sus datos para la calculadora apra que sean utilizados en la creacion de la calculadora especial
+       CalculadoraEspecial calculadoraEspecial;
+       System.out.println("Que tipo de Calculadora desea? ");
+       String nomCalculadora = sn.nextLine();
+       System.out.println("Ingrese el color de la Calculadora: ");
+       String colCalculadora = sn.nextLine();
+       System.out.println("Ingrese la dimension de la pantalla de la Calculadora: ");
+       int dimensionPantalla = sn.nextInt();
+       sn.nextLine();
+       System.out.println("Ingrese el numero de serie de Calculadora: ");
+       String numSerie = sn.nextLine();
+       System.out.println("Ingrese su Nombre como Propietario: ");
+       String nomUsuario = sn.nextLine();
+       System.out.println("");
+       System.out.println("=======================");
+       calculadoraEspecial = new CalculadoraEspecial(nomCalculadora, colCalculadora, dimensionPantalla, numSerie, nomUsuario);
+
        boolean salir = false;
        int opcion, opcioncalculadora, num1,  num2; 
          
        //mostrar los datos
        calculadoraEspecial.mostrarDatos();
-       
+       System.out.println("=======================");
        do{
-           
-           System.out.println("");
+        
            System.out.println("");
            System.out.println("Bienvenidos a si sistema de calculadora preferido.");
            System.out.println("Mi Nombre es JACK!");
@@ -166,8 +182,6 @@ public class TareaPrograIIPOO {
     
                 case 3:
                     salir=true;
-                default:
-                    System.out.println("Solo numeros entre 1 y 3");
             }  
         }
     
