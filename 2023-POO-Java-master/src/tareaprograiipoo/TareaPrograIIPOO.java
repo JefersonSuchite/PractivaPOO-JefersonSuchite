@@ -1,17 +1,13 @@
 //Jeferson Suchite 0909/22/12681
 package tareaprograiipoo;
-
 import java.util.Scanner;
+import javax.swing.JFrame;
 
-
-public class TareaPrograIIPOO {
-
-    @SuppressWarnings("UnusedAssignment")
-    
+public class TareaPrograIIPOO extends JFrame {
+    @SuppressWarnings("UnusedAssignment")    
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
-      // Calculadora calculadoraEspecial = new Calculadora("JP");
-       
+       //Calculadora calculadora = new Calculadora("JP");      
        //haciendo que el usuario ingrese sus datos para la calculadora apra que sean utilizados en la creacion de la calculadora especial
        CalculadoraEspecial calculadoraEspecial;
        System.out.println("Que tipo de Calculadora desea? ");
@@ -28,17 +24,14 @@ public class TareaPrograIIPOO {
        System.out.println("");
        System.out.println("=======================");
        calculadoraEspecial = new CalculadoraEspecial(nomCalculadora, colCalculadora, dimensionPantalla, numSerie, nomUsuario);
-
        boolean salir = false;
-       int opcion, opcioncalculadora, num1,  num2; 
-         
+       int opcion, opcioncalculadora, num1,  num2;      
        //mostrar los datos
        calculadoraEspecial.mostrarDatos();
        System.out.println("=======================");
-       do{
-        
+       do{      
            System.out.println("");
-           System.out.println("Bienvenidos a si sistema de calculadora preferido.");
+           System.out.println("Bienvenidos a su sistema de calculadora preferido.");
            System.out.println("Mi Nombre es JACK!");
            System.out.println("Por favor, seleccione la calculadora a utilizar");
            System.out.println("");
@@ -46,10 +39,8 @@ public class TareaPrograIIPOO {
            System.out.println("1. Calculadora Simple");
            System.out.println("2. Calculadora Especial");
            System.out.println("3. Salir");
-           System.out.println("=======================");
-           
-           opcioncalculadora = sn.nextInt();
-           
+           System.out.println("=======================");          
+           opcioncalculadora = sn.nextInt();          
            switch(opcioncalculadora){
                case 1:
                   System.out.println("");
@@ -62,17 +53,14 @@ public class TareaPrograIIPOO {
                   System.out.println("6. Verificar numero Primo");
                   System.out.println("7. Salir");
                   System.out.println("Selecciona una opcion");
-                  System.out.println("=======================");
-                  
-                  opcion = sn.nextInt();
-                   
+                  System.out.println("=======================");                  
+                  opcion = sn.nextInt();                   
               switch(opcion){
                   case 1:  
                       System.out.println("Ingrese el primer numero: ");
                       num1 = sn.nextInt();
                       System.out.println("Ingrese el segundo numero: ");
-                      num2 = sn.nextInt();
-                      
+                      num2 = sn.nextInt();                     
                       System.out.println("El resultado de la suma es = " + calculadoraEspecial.sumar(num1, num2));
                       break;
                   case 2:
@@ -109,11 +97,9 @@ public class TareaPrograIIPOO {
                   case 7:
                       salir=true;
                   default:
-                      System.out.println("Solo números entre 1 y 7");
-                 
+                      System.out.println("Solo números entre 1 y 7");     
                 }
-              break;
-              
+              break;          
               case 2:
                     System.out.println("");
                     System.out.println("=======================");
@@ -178,15 +164,16 @@ public class TareaPrograIIPOO {
                          default:
                             System.out.println("Solo numeros entre 1 y 8");
                     }
-                break;
-    
+                break;   
                 case 3:
                     salir=true;
             }  
-        }
-    
+        }   
         while(!salir);
-       System.out.println("Hasta luego!");
-        
+       System.out.println("Hasta luego!");   
+       
+       CalculadoraInterfazGrafica interfaz = new CalculadoraInterfazGrafica();
+       interfaz.setVisible(true);
+       interfaz.setLocationRelativeTo(null);
     }
 }
