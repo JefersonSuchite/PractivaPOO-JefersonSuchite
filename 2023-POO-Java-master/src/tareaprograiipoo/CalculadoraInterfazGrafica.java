@@ -1,9 +1,10 @@
 //Jefeson Alexis Suchite Chavez 0909/22/12681
 package tareaprograiipoo;
+import java.awt.Color;
 
 public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
     CalculadoraEspecial ce;
-
+    int xMouse, yMouse;
    public CalculadoraInterfazGrafica() {
       this.ce = new CalculadoraEspecial("Cientifica", "Negro", 15, "123fx4mg", "Jackson");
       initComponents();
@@ -20,6 +21,9 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
    private void initComponents() {
 
       bg = new javax.swing.JPanel();
+      header = new javax.swing.JPanel();
+      headerX = new javax.swing.JPanel();
+      exittxt = new javax.swing.JLabel();
       bgreslt = new javax.swing.JPanel();
       igutxt = new javax.swing.JTextField();
       bgfun = new javax.swing.JPanel();
@@ -34,18 +38,58 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       npbtn = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-      setPreferredSize(new java.awt.Dimension(500, 300));
+      setUndecorated(true);
+      setResizable(false);
 
       bg.setBackground(new java.awt.Color(255, 255, 255));
       bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-      bgreslt.setBackground(new java.awt.Color(204, 204, 204));
-      bgreslt.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+      header.setBackground(java.awt.Color.lightGray);
+      header.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+      header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+         public void mouseDragged(java.awt.event.MouseEvent evt) {
+            headerMouseDragged(evt);
+         }
+      });
+      header.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            headerMousePressed(evt);
+         }
+      });
+      header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+      headerX.setBackground(java.awt.Color.lightGray);
+      headerX.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+      exittxt.setBackground(new java.awt.Color(255, 0, 0));
+      exittxt.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      exittxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      exittxt.setText("X");
+      exittxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      exittxt.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mouseClicked(java.awt.event.MouseEvent evt) {
+            exittxtMouseClicked(evt);
+         }
+         public void mouseEntered(java.awt.event.MouseEvent evt) {
+            exittxtMouseEntered(evt);
+         }
+         public void mouseExited(java.awt.event.MouseEvent evt) {
+            exittxtMouseExited(evt);
+         }
+      });
+      headerX.add(exittxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, -1));
+
+      header.add(headerX, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 20));
+
+      bg.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 20));
+
+      bgreslt.setBackground(java.awt.Color.lightGray);
       bgreslt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
       igutxt.setEditable(false);
       igutxt.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
       igutxt.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+      igutxt.setBorder(null);
       bgreslt.add(igutxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 480, 70));
 
       bg.add(bgreslt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 120));
@@ -55,15 +99,25 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       bgfun.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
       num1txt.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-      num1txt.setForeground(new java.awt.Color(204, 204, 204));
+      num1txt.setForeground(java.awt.Color.lightGray);
       num1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
       num1txt.setText("Primer Numero");
+      num1txt.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            num1txtMousePressed(evt);
+         }
+      });
       bgfun.add(num1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 150, 40));
 
       num2txt.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-      num2txt.setForeground(new java.awt.Color(204, 204, 204));
+      num2txt.setForeground(java.awt.Color.lightGray);
       num2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
       num2txt.setText("Segundo Numero");
+      num2txt.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            num2txtMousePressed(evt);
+         }
+      });
       bgfun.add(num2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 150, 40));
 
       cleanbtm.setBackground(new java.awt.Color(255, 51, 51));
@@ -212,12 +266,60 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       igutxt.setText(String.valueOf(resultado));
    }//GEN-LAST:event_restbtnActionPerformed
 
+   private void num1txtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_num1txtMousePressed
+      if(num1txt.getText().equals("Primer Numero")){
+         num1txt.setText("");
+         num1txt.setForeground(Color.black);
+      }
+      if(num2txt.getText().equals("Segundo Numero")){
+         num2txt.setText("Segundo Numero");
+         num2txt.setForeground(Color.lightGray);
+      }
+   }//GEN-LAST:event_num1txtMousePressed
+
+   private void num2txtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_num2txtMousePressed
+      if(num2txt.getText().equals("Segundo Numero")){
+         num2txt.setText("");
+         num2txt.setForeground(Color.black);
+      }
+      if(num1txt.getText().equals("Primer Numero")){
+         num1txt.setText("Primer Numero");
+         num1txt.setForeground(Color.lightGray);
+      }
+   }//GEN-LAST:event_num2txtMousePressed
+
+   private void exittxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exittxtMouseClicked
+      System.exit(0);
+   }//GEN-LAST:event_exittxtMouseClicked
+
+   private void exittxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exittxtMouseEntered
+      headerX.setBackground(Color.red);
+   }//GEN-LAST:event_exittxtMouseEntered
+
+   private void exittxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exittxtMouseExited
+      headerX.setBackground(Color.lightGray);
+   }//GEN-LAST:event_exittxtMouseExited
+
+   private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
+      xMouse=evt.getX();
+      yMouse=evt.getY();
+   }//GEN-LAST:event_headerMousePressed
+
+   private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
+      int x=evt.getXOnScreen();
+      int y=evt.getYOnScreen();
+      this.setLocation(x-xMouse, y-yMouse);
+   }//GEN-LAST:event_headerMouseDragged
+
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JPanel bg;
    private javax.swing.JPanel bgfun;
    private javax.swing.JPanel bgreslt;
    private javax.swing.JButton cleanbtm;
    private javax.swing.JButton divbtn;
+   private javax.swing.JLabel exittxt;
+   private javax.swing.JPanel header;
+   private javax.swing.JPanel headerX;
    private javax.swing.JTextField igutxt;
    private javax.swing.JButton mulbtn;
    private javax.swing.JButton npbtn;
