@@ -175,5 +175,6 @@ public class TareaPrograIIPOO extends JFrame {
        CalculadoraInterfazGrafica interfaz = new CalculadoraInterfazGrafica();
        interfaz.setVisible(true);
        interfaz.setLocationRelativeTo(null);
+       
     }
 }
