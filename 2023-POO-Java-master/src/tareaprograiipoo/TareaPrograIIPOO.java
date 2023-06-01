@@ -38,7 +38,7 @@ public class TareaPrograIIPOO extends JFrame {
            System.out.println("=======================");
            System.out.println("1. Calculadora Simple");
            System.out.println("2. Calculadora Especial");
-           System.out.println("3. Salir");
+           System.out.println("3. Interfaz");
            System.out.println("=======================");          
            opcioncalculadora = sn.nextInt();          
            switch(opcioncalculadora){
@@ -95,9 +95,7 @@ public class TareaPrograIIPOO extends JFrame {
                       System.out.println("Es primo? = " + calculadoraEspecial.esPrimo(num1));
                       break;
                   case 7:
-                      salir=true;
-                  default:
-                      System.out.println("Solo números entre 1 y 7");     
+                      salir=true;  
                 }
               break;          
               case 2:
@@ -161,8 +159,6 @@ public class TareaPrograIIPOO extends JFrame {
                         }
                          case 8: 
                             salir = true;
-                         default:
-                            System.out.println("Solo numeros entre 1 y 8");
                     }
                 break;   
                 case 3:
