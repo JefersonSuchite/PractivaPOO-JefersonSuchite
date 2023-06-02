@@ -36,6 +36,14 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       divbtn = new javax.swing.JButton();
       rzcbtn = new javax.swing.JButton();
       npbtn = new javax.swing.JButton();
+      nabtn = new javax.swing.JButton();
+      ptcbtn = new javax.swing.JButton();
+      lnbtn = new javax.swing.JButton();
+      sinbtn = new javax.swing.JButton();
+      cosbtn = new javax.swing.JButton();
+      tanbtn = new javax.swing.JButton();
+      cubrzcbtn = new javax.swing.JButton();
+      bgimg = new javax.swing.JLabel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
       setUndecorated(true);
@@ -107,7 +115,7 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             num1txtMousePressed(evt);
          }
       });
-      bgfun.add(num1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 150, 40));
+      bgfun.add(num1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 150, 40));
 
       num2txt.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
       num2txt.setForeground(java.awt.Color.lightGray);
@@ -118,7 +126,7 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             num2txtMousePressed(evt);
          }
       });
-      bgfun.add(num2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 150, 40));
+      bgfun.add(num2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 150, 40));
 
       cleanbtm.setBackground(new java.awt.Color(255, 51, 51));
       cleanbtm.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -132,9 +140,9 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       });
       bgfun.add(cleanbtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 30));
 
-      sumbtn.setBackground(new java.awt.Color(102, 255, 255));
+      sumbtn.setBackground(new java.awt.Color(255, 204, 204));
       sumbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      sumbtn.setText("Sumar");
+      sumbtn.setText("+");
       sumbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       sumbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       sumbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -142,11 +150,11 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             sumbtnActionPerformed(evt);
          }
       });
-      bgfun.add(sumbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 90, 30));
+      bgfun.add(sumbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 30, 30));
 
-      restbtn.setBackground(new java.awt.Color(102, 255, 255));
+      restbtn.setBackground(new java.awt.Color(255, 204, 204));
       restbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      restbtn.setText("Resta");
+      restbtn.setText("-");
       restbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       restbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       restbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -154,11 +162,11 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             restbtnActionPerformed(evt);
          }
       });
-      bgfun.add(restbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 90, 30));
+      bgfun.add(restbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 30, 30));
 
-      mulbtn.setBackground(new java.awt.Color(102, 255, 255));
+      mulbtn.setBackground(new java.awt.Color(255, 204, 204));
       mulbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      mulbtn.setText("Multiplicar");
+      mulbtn.setText("x");
       mulbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       mulbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       mulbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -166,11 +174,11 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             mulbtnActionPerformed(evt);
          }
       });
-      bgfun.add(mulbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 90, 30));
+      bgfun.add(mulbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 30, 30));
 
-      divbtn.setBackground(new java.awt.Color(102, 255, 255));
+      divbtn.setBackground(new java.awt.Color(255, 204, 204));
       divbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      divbtn.setText("Dividir");
+      divbtn.setText("/");
       divbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       divbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       divbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -178,11 +186,11 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             divbtnActionPerformed(evt);
          }
       });
-      bgfun.add(divbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 90, 30));
+      bgfun.add(divbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 30, 30));
 
-      rzcbtn.setBackground(new java.awt.Color(102, 255, 255));
+      rzcbtn.setBackground(new java.awt.Color(204, 255, 204));
       rzcbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      rzcbtn.setText("Raiz Cuadrada");
+      rzcbtn.setText("√ ");
       rzcbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       rzcbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       rzcbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -190,11 +198,11 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             rzcbtnActionPerformed(evt);
          }
       });
-      bgfun.add(rzcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 110, 30));
+      bgfun.add(rzcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 30, 30));
 
-      npbtn.setBackground(new java.awt.Color(102, 255, 255));
+      npbtn.setBackground(new java.awt.Color(255, 204, 204));
       npbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-      npbtn.setText("Numero Primo");
+      npbtn.setText("Num Primo");
       npbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
       npbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
       npbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +210,130 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
             npbtnActionPerformed(evt);
          }
       });
-      bgfun.add(npbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 110, 30));
+      bgfun.add(npbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 80, 30));
+
+      nabtn.setBackground(new java.awt.Color(255, 204, 204));
+      nabtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      nabtn.setText("Num Aleatorio");
+      nabtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      nabtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      nabtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            nabtnMousePressed(evt);
+         }
+      });
+      nabtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            nabtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(nabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 100, 30));
+
+      ptcbtn.setBackground(new java.awt.Color(255, 204, 204));
+      ptcbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      ptcbtn.setText("^");
+      ptcbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      ptcbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      ptcbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            ptcbtnMousePressed(evt);
+         }
+      });
+      ptcbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            ptcbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(ptcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 30, 30));
+
+      lnbtn.setBackground(new java.awt.Color(204, 255, 204));
+      lnbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      lnbtn.setText("Ln");
+      lnbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      lnbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      lnbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            lnbtnMousePressed(evt);
+         }
+      });
+      lnbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            lnbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(lnbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 40, 30));
+
+      sinbtn.setBackground(new java.awt.Color(255, 204, 204));
+      sinbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      sinbtn.setText("Sin");
+      sinbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      sinbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      sinbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            sinbtnMousePressed(evt);
+         }
+      });
+      sinbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sinbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(sinbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 40, 30));
+
+      cosbtn.setBackground(new java.awt.Color(255, 204, 204));
+      cosbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      cosbtn.setText("Cos");
+      cosbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      cosbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      cosbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            cosbtnMousePressed(evt);
+         }
+      });
+      cosbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            cosbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(cosbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 40, 30));
+
+      tanbtn.setBackground(new java.awt.Color(255, 204, 204));
+      tanbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      tanbtn.setText("Tan");
+      tanbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      tanbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      tanbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            tanbtnMousePressed(evt);
+         }
+      });
+      tanbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            tanbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(tanbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 40, 30));
+
+      cubrzcbtn.setBackground(new java.awt.Color(204, 255, 204));
+      cubrzcbtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+      cubrzcbtn.setText("3√ ");
+      cubrzcbtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+      cubrzcbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+      cubrzcbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+         public void mousePressed(java.awt.event.MouseEvent evt) {
+            cubrzcbtnMousePressed(evt);
+         }
+      });
+      cubrzcbtn.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            cubrzcbtnActionPerformed(evt);
+         }
+      });
+      bgfun.add(cubrzcbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 30, 30));
+
+      bgimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/Anya.jpg"))); // NOI18N
+      bgimg.setText("jLabel1");
+      bgfun.add(bgimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 500, 390));
 
       bg.add(bgfun, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 500, 280));
 
@@ -222,8 +353,10 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
 
    private void cleanbtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanbtmActionPerformed
       igutxt.setText("");
-      num1txt.setText("");
-      num2txt.setText("");
+      num1txt.setText("Primer Numero");
+      num1txt.setForeground(Color.lightGray);
+      num2txt.setText("Segundo Numero");
+      num2txt.setForeground(Color.lightGray);
    }//GEN-LAST:event_cleanbtmActionPerformed
 
    private void sumbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumbtnActionPerformed
@@ -311,22 +444,101 @@ public class CalculadoraInterfazGrafica extends javax.swing.JFrame {
       this.setLocation(x-xMouse, y-yMouse);
    }//GEN-LAST:event_headerMouseDragged
 
+   private void nabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nabtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_nabtnActionPerformed
+
+   private void nabtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nabtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.generarNumeroAleatorio((int) num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_nabtnMousePressed
+
+   private void ptcbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptcbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_ptcbtnActionPerformed
+
+   private void ptcbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ptcbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double num2 = Double.parseDouble(num2txt.getText());
+      double resultado = ce.calcularPotencia(num1,num2);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_ptcbtnMousePressed
+
+   private void lnbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lnbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.calcularLogaritmo( num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_lnbtnMousePressed
+
+   private void lnbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_lnbtnActionPerformed
+
+   private void sinbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sinbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.calcularSeno( num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_sinbtnMousePressed
+
+   private void sinbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_sinbtnActionPerformed
+
+   private void cosbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cosbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.calcularCoseno( num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_cosbtnMousePressed
+
+   private void cosbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_cosbtnActionPerformed
+
+   private void tanbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tanbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.calcularTangente( num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_tanbtnMousePressed
+
+   private void tanbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_tanbtnActionPerformed
+
+   private void cubrzcbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cubrzcbtnActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_cubrzcbtnActionPerformed
+
+   private void cubrzcbtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cubrzcbtnMousePressed
+      double num1 = Double.parseDouble(num1txt.getText());
+      double resultado = ce.calcularRaizCubica(num1);
+      igutxt.setText(String.valueOf(resultado));
+   }//GEN-LAST:event_cubrzcbtnMousePressed
+
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JPanel bg;
    private javax.swing.JPanel bgfun;
+   private javax.swing.JLabel bgimg;
    private javax.swing.JPanel bgreslt;
    private javax.swing.JButton cleanbtm;
+   private javax.swing.JButton cosbtn;
+   private javax.swing.JButton cubrzcbtn;
    private javax.swing.JButton divbtn;
    private javax.swing.JLabel exittxt;
    private javax.swing.JPanel header;
    private javax.swing.JPanel headerX;
    private javax.swing.JTextField igutxt;
+   private javax.swing.JButton lnbtn;
    private javax.swing.JButton mulbtn;
+   private javax.swing.JButton nabtn;
    private javax.swing.JButton npbtn;
    private javax.swing.JTextField num1txt;
    private javax.swing.JTextField num2txt;
+   private javax.swing.JButton ptcbtn;
    private javax.swing.JButton restbtn;
    private javax.swing.JButton rzcbtn;
+   private javax.swing.JButton sinbtn;
    private javax.swing.JButton sumbtn;
+   private javax.swing.JButton tanbtn;
    // End of variables declaration//GEN-END:variables
 }

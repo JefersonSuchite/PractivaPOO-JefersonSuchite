@@ -1,11 +1,15 @@
 //Jeferson Suchite 0909/22/12681
 package tareaprograiipoo;
-import java.util.Scanner;
 import javax.swing.JFrame;
-
+//import java.util.Scanner;
 public class TareaPrograIIPOO extends JFrame {
     @SuppressWarnings("UnusedAssignment")    
     public static void main(String[] args) {
+       CalculadoraInterfazGrafica interfaz = new CalculadoraInterfazGrafica();
+       interfaz.setVisible(true);
+       interfaz.setLocationRelativeTo(null);
+       
+       /*
        Scanner sn = new Scanner(System.in);
        //Calculadora calculadora = new Calculadora("JP");      
        //haciendo que el usuario ingrese sus datos para la calculadora apra que sean utilizados en la creacion de la calculadora especial
@@ -167,10 +171,6 @@ public class TareaPrograIIPOO extends JFrame {
         }   
         while(!salir);
        System.out.println("Hasta luego!");   
-       
-       CalculadoraInterfazGrafica interfaz = new CalculadoraInterfazGrafica();
-       interfaz.setVisible(true);
-       interfaz.setLocationRelativeTo(null);
-       
+       */  
     }
 }
